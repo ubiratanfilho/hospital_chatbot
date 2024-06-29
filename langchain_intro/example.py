@@ -1,5 +1,9 @@
-from chatbot import review_chain
+from chatbot import hospital_agent_executor
 
-question = """Has anyone complained about
-           communication with the hospital staff?"""
-print(review_chain.invoke(question))
+hospital_agent_executor.invoke(
+    {"input": "What is the current wait time at hospital C?"}
+)
+
+hospital_agent_executor.invoke(
+    {"input": "What have patients said about their comfort at the hospital?"}
+)
